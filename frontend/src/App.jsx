@@ -12,7 +12,7 @@ function App() {
     setResponse(null);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/add_video", {
+      const res = await axios.post("http://127.0.0.1:5000/summarize", {
         youtube_url: youtubeUrl,
       });
       setResponse(res.data);
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-2xl ">
         <h1 className="text-2xl font-bold mb-4 text-center text-blue-600">
           YouTube Video Özetleme
         </h1>
